@@ -112,23 +112,24 @@
                         <div class="card-body">
                             <div>
                                 <p class="d-inline">Per Player:</p>
-                                <input type="text" class="w-50" placeholder="$ Amount">
+                                <input id="per-player" type="text" class="w-50" placeholder="$ Amount">
                             </div>
 
-                            <button type="button" class="btn btn-outline-primary m-3 ">Calculate</button>
+                            <button type="button" class="btn btn-outline-primary m-3 " id="Calculate">Calculate</button>
 
-                            <p>Player Expenses: $<span>0000</span></p>
+                            <p>Player Expenses: $<span id="player-expenses">0000</span></p>
 
                             <div>
                                 <p class="d-inline">Manager:</p>
-                                <input type="text" class="w-50" placeholder="$ Amount">
+                                <input id="manager" type="text" class="w-50" placeholder="$ Amount">
                             </div>
                             <div>
                                 <p class="d-inline">Coach: </p>
-                                <input type="text" class="w-50" placeholder="$ Amount">
+                                <input id="coach" type="text" class="w-50" placeholder="$ Amount">
                             </div>
-                            <button type="button" class="btn btn-outline-primary m-3 ">Calculate Total</button>
-                            <p>Total: $<span class="text-warning">0000</span></p>
+                            <button id="calculate-total" type="button" class="btn btn-outline-primary m-3 ">Calculate
+                                Total</button>
+                            <p>Total: $<span id="total" class="text-warning">0000</span></p>
                         </div>
 
                     </div>
