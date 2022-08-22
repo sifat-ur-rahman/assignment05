@@ -33,23 +33,27 @@ function addToCart(element) {
     displayName(cartArray)
     element.disabled = true
 }
+// text filed to number fumction
 function textToNumber(elementId) {
     const textFild = document.getElementById(elementId)
     const textString = textFild.innerText
     const textNumber = parseFloat(textString)
     return textNumber
 }
+// input filed function
 function input(inputElement) {
     const inputElemint = document.getElementById(inputElement);
     const inputString = inputElemint.value;
     const inputNumber = parseFloat(inputString)
     return inputNumber
 }
+// set element function
 function setTextElementById(elementId, newElement) {
     const textElement = document.getElementById(elementId);
     textElement.innerText = newElement
 
 }
+
 document.getElementById('Calculate').addEventListener('click', function () {
 
     const nambersOfPalyer = textToNumber('player-selected')
@@ -58,6 +62,7 @@ document.getElementById('Calculate').addEventListener('click', function () {
 
     setTextElementById('player-expenses', playerExpenses)
 })
+
 document.getElementById('calculate-total').addEventListener('click', function () {
     const playerExpenses = textToNumber('player-expenses')
     const managerAmount = input('manager')
