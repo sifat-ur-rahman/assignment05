@@ -5,22 +5,33 @@ function displayName(playerName) {
     const oderList = document.getElementById('name-list')
     oderList.innerHTML = ''
     for (let i = 0; i < playerName.length; i++) {
-        // console.log(cartArray[i])
         const name = cartArray[i]
+
         const tr = document.createElement('tr')
         tr.innerHTML = `
         <th>${i + 1}.</th>
         <td> ${name}</td<
         `
-        oderList.appendChild(tr)
+
+        if (cartArray.length <= 5) {
+            oderList.appendChild(tr)
+        }
+        else (
+
+            alert("You can't add more than 5 players")
+
+        )
     }
+}
+function disable() {
+
 }
 function addToCart(element) {
     const playerName = element.parentNode.children[0].innerText
     cartArray.push(playerName)
-    // console.log(cartArray.length)
     document.getElementById('player-selected').innerText = cartArray.length
     displayName(cartArray)
+    element.disabled = true
 }
 function textToNumber(elementId) {
     const textFild = document.getElementById(elementId)
