@@ -23,9 +23,7 @@ function displayName(playerName) {
         )
     }
 }
-function disable() {
 
-}
 function addToCart(element) {
     const playerName = element.parentNode.children[0].innerText
     cartArray.push(playerName)
