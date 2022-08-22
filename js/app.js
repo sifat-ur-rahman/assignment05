@@ -2,8 +2,8 @@
 const cartArray = []
 
 function displayName(playerName) {
-    const oderList = document.getElementById('name-list')
-    oderList.innerHTML = ''
+    const tableBodey = document.getElementById('name-list')
+    tableBodey.innerHTML = ''
     for (let i = 0; i < playerName.length; i++) {
         const name = cartArray[i]
 
@@ -13,13 +13,12 @@ function displayName(playerName) {
         <td> ${name}</td<
         `
 
-        if (cartArray.length <= 5) {
-            oderList.appendChild(tr)
+        if (cartArray.length > 5) {
+            alert("You can't add more than 5 players")
+            return
         }
         else (
-
-            alert("You can't add more than 5 players")
-
+            tableBodey.appendChild(tr)
         )
     }
 }
@@ -43,6 +42,7 @@ function input(inputElement) {
     const inputElemint = document.getElementById(inputElement);
     const inputString = inputElemint.value;
     const inputNumber = parseFloat(inputString)
+    inputElemint.value = ''
     return inputNumber
 }
 // set element function
